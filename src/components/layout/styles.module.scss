@@ -1,3 +1,57 @@
+@import "../../sass/variables.scss";
+
 .layout {
+  z-index: 10;
   display: block;
+  position: relative;
+
+  .layout-inner {
+    width: 100vw;
+    overflow-x: hidden;
+
+    & > svg {
+      opacity: 0.1;
+      display: none;
+      position: absolute;
+
+      * {
+        fill: $orange;
+      }
+
+      &:first-of-type {
+        width: 50vw;
+        top: -22vw;
+        left: -22vw;
+      }
+
+      &:last-of-type {
+        width: 50vw;
+        top: -22vw;
+        right: -22vw;
+      }
+    }
+
+    .orange-blur {
+      left: -300px;
+      top: -300px;
+      width: 600px;
+      height: 900px;
+      position: absolute;
+      filter: blur(500px);
+      background-color: rgba($orange, 0.3);
+    }
+  }
+
+  @media all and (min-width: $tablet) {
+    .layout-inner svg {
+      display: block;
+    }
+
+    .layout-inner .orange-blur {
+      left: -1000px;
+      top: -1000px;
+      width: 2000px;
+      height: 1500px;
+    }
+  }
 }

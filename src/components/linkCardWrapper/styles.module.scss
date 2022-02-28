@@ -1,0 +1,12 @@
+@import "../../sass/variables.scss";
+
+.link-card-wrapper {
+  padding: 2rem 0;
+}
+
+.link-card-wrapper-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+}

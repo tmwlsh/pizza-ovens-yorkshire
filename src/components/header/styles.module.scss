@@ -1,7 +1,9 @@
 @import "../../sass/variables.scss";
 
 .header {
+  z-index: 300;
   padding: 1.5rem 0;
+  position: relative;
 }
 
 .header-inner {

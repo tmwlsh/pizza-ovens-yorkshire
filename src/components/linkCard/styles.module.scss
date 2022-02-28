@@ -1,0 +1,76 @@
+@import "../../sass/variables.scss";
+
+.link-card {
+  overflow: hidden;
+  border-radius: 50px;
+  position: relative;
+  flex: 0 0 100%;
+  margin-bottom: 2rem;
+
+  img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 1.5;
+    object-fit: cover;
+    transform: scale(1);
+  }
+
+  p {
+    margin: 0;
+    width: 100%;
+    z-index: 100;
+    display: block;
+    font-size: 18px;
+    font-weight: 900;
+    text-align: center;
+    position: relative;
+    padding: 1.7rem 1rem;
+    letter-spacing: 0.2rem;
+    box-sizing: border-box;
+    background-color: $black;
+    text-transform: uppercase;
+  }
+
+  a {
+    color: $orange;
+    text-decoration: none;
+  }
+
+  .image-overlay {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+    height: 100%;
+    position: absolute;
+    mix-blend-mode: color;
+    background-color: $orange;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media all and (min-width: $mobile) {
+    margin-bottom: 0;
+    flex: 0 0 calc(33.333% - 2rem);
+
+    a img {
+      aspect-ratio: 0.9;
+    }
+  }
+
+  @media all and (min-width: $tablet) {
+    a img {
+      transition: 0.5s $transition;
+    }
+
+    a {
+      &:hover {
+        img {
+          transform: scale(1.1) rotate(5deg);
+        }
+      }
+    }
+  }
+}
