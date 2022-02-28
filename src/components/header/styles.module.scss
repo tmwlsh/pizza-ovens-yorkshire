@@ -1,3 +1,81 @@
+@import "../../sass/variables.scss";
+
 .header {
-  background: blue;
+  padding: 1.5rem 0;
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  svg {
+    width: 80px;
+
+    * {
+      fill: $orange;
+    }
+
+    @media all and (min-width: $tablet) {
+      width: 120px;
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+    li {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      a {
+        padding: 1rem;
+        display: block;
+        font-size: 18px;
+        text-decoration: none;
+        color: rgba($white, 0.4);
+      }
+    }
+
+    &:first-of-type {
+      display: none;
+    }
+
+    &:last-of-type {
+      li a {
+        padding: 0.5rem 1.5rem;
+        border-radius: 100px;
+        border: 1px solid $orange;
+      }
+    }
+
+    @media all and (min-width: $mobile) {
+      &:first-of-type {
+        display: flex;
+      }
+
+      li {
+        a {
+          transition: 0.3s $transition;
+
+          &:hover {
+            color: $white;
+          }
+        }
+      }
+    }
+
+    @media all and (min-width: $tablet) {
+      &:last-of-type {
+        li a {
+          padding: 0.8rem 3rem;
+        }
+      }
+    }
+  }
 }

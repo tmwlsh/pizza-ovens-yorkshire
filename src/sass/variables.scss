@@ -1,4 +1,19 @@
+// fonts
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&display=swap");
+$syne: "Syne", sans-serif;
+
 // colours
 
 $brown: #2e2823;
 $orange: #fd9b4b;
+$white: #ffffff;
+
+// misc
+
+$transition: cubic-bezier(0.91, 0.24, 0.1, 0.77);
+
+// breakpoints
+
+$mobile: 768px;
+$tablet: 1280px;
+$desktop: 1600px;
